@@ -18,7 +18,7 @@ struct I_am_boredApp: App {
     @State var activity: String = ""
 
     var body: some Scene {
-        MenuBarExtra("Mir ist langweilig…") {
+        MenuBarExtra("I am bored…") {
             MenuBarView(text: $activity)
                 .onAppear {
                     observer = NSApplication.shared.observe(\.keyWindow) { x, y in
