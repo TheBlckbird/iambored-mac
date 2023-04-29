@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		7808DBF429FD751900214621 /* I_am_boredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808DBF329FD751900214621 /* I_am_boredApp.swift */; };
-		7808DBF629FD751900214621 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808DBF529FD751900214621 /* ContentView.swift */; };
 		7808DBF829FD751A00214621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7808DBF729FD751A00214621 /* Assets.xcassets */; };
 		7808DBFB29FD751A00214621 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7808DBFA29FD751A00214621 /* Preview Assets.xcassets */; };
+		7808DC0529FD7B0C00214621 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7808DC0429FD7B0C00214621 /* MenuBarView.swift */; };
+		7808DC0829FD7CF200214621 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7808DC0729FD7CF200214621 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7808DBF029FD751900214621 /* I am bored.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I am bored.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7808DBF329FD751900214621 /* I_am_boredApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_am_boredApp.swift; sourceTree = "<group>"; };
-		7808DBF529FD751900214621 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7808DBF729FD751A00214621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7808DBFA29FD751A00214621 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7808DBFC29FD751A00214621 /* I_am_bored.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = I_am_bored.entitlements; sourceTree = "<group>"; };
+		7808DC0429FD7B0C00214621 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7808DC0829FD7CF200214621 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				7808DBF329FD751900214621 /* I_am_boredApp.swift */,
-				7808DBF529FD751900214621 /* ContentView.swift */,
+				7808DC0429FD7B0C00214621 /* MenuBarView.swift */,
 				7808DBF729FD751A00214621 /* Assets.xcassets */,
 				7808DBFC29FD751A00214621 /* I_am_bored.entitlements */,
 				7808DBF929FD751A00214621 /* Preview Content */,
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = "I am bored";
+			packageProductDependencies = (
+				7808DC0729FD7CF200214621 /* Alamofire */,
+			);
 			productName = "I am bored";
 			productReference = 7808DBF029FD751900214621 /* I am bored.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 7808DBE729FD751900214621;
+			packageReferences = (
+				7808DC0629FD7CF200214621 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 7808DBF129FD751900214621 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7808DBF629FD751900214621 /* ContentView.swift in Sources */,
+				7808DC0529FD7B0C00214621 /* MenuBarView.swift in Sources */,
 				7808DBF429FD751900214621 /* I_am_boredApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,12 +274,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "I am bored/I_am_bored.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"I am bored/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -280,6 +292,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.louisweigel.I-am-bored";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -291,12 +304,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "I am bored/I_am_bored.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"I am bored/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +322,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.louisweigel.I-am-bored";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -332,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7808DC0629FD7CF200214621 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7808DC0729FD7CF200214621 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7808DC0629FD7CF200214621 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7808DBE829FD751900214621 /* Project object */;
 }
