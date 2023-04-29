@@ -10,7 +10,12 @@ struct MenuBarView: View {
     @Binding var text: String
     
     var body: some View {
-        Text(text == "" ? "Loading…" : text)
-            .padding()
+        Group {
+            Text(text == "" ? "Loading…" : text)
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
+            }
+        }
+        .padding()
     }
 }
